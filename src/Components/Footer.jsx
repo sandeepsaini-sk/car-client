@@ -30,8 +30,8 @@ export default function Footer() {
     ]
   return (
     <>
-    <div className='bg-slate-800 py-5 font-serif'>
-        <div className='text-slate-300 mx-20'>
+    <div className='bg-slate-800 py-5 font-serif overflow-hidden'>
+        <div className='text-slate-300 sm:mx-20 mx-3'>
              <div className='text-center mb-10'> <Link to={"/"} className="md:text-4xl text-3xl shadow-md shadow-teal-400 hover:shadow-blue-500 px-2 md:px-3 mx-4 md:mx-0 rounded-xl ">
             C<span className="md:text-2xl text-xl">ar</span>
             <span className="text-red-700 italic md:text-xl text-sm">Rental</span>{" "}
