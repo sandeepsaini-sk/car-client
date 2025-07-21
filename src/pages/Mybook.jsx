@@ -19,7 +19,24 @@ export default function Mybook() {
   useEffect(() => {
     if (userid) fetchBookings();
   }, [userid]);;
+ const updateOrderStatus = async (Id, newStatus) => {
+    try {
+      const res = await fetch(`${Backend}/bookings/${Id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status: newStatus }),
+      });
 
+      if (res.ok) {
+        fetchBookings(); 
+        toast.success(res.message|| "Order status updated")
+      } else {
+        toast.error("Failed to update order status");
+      }
+    } catch (err) {
+      toast.error("Error updating order status:");
+    }
+  };
   return (
     <>
     <div className="shadow-md text-xl sm:text-2xl md:text-4xl font-serif font-semibold text-center py-4 bg-white sticky top-0 z-10">
@@ -56,7 +73,7 @@ export default function Mybook() {
                   <span className="font-semibold">Car:</span>{" "}
                   <span>{book.title}</span>
                 </div>
-                <div className="my-2">
+                <div className="my-2 flex justify-between items-center">
                   <span className="font-semibold">status:</span>{" "}
                   <span  className={`px-2 py-1 rounded ${
                   book.status === "Pending"
@@ -65,7 +82,14 @@ export default function Mybook() {
                     ? "bg-green-500 text-white"
                     : "bg-red-500 text-white"
                 }`}>{book.status}</span>
+                <button onClick={() => updateOrderStatus(book._id, "Cancelled")} className="bg-red-500 text-white px-3 py-1 rounded cursor-pointer">
+                Cancel Booking
+              </button>
                 </div>
+                    {/* Buttons for Status Update */}
+            <div className="flex gap-3 m-4 justify-end ">
+              
+            </div>
               </div>
             ))}
           </div>
