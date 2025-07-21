@@ -8,8 +8,8 @@ export default function Customerchozi() {
   return (
     <>
     <div className='bg-slate-100 py-10'>
-       <div className=' max-w-7xl mx-auto py-4 px-16'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 justify-between items-center gap-x-10 m-5'>
+       <div className=' max-w-7xl mx-auto py-4 sm:px-16'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 justify-between items-center md:gap-x-10 m-5'>
                 {/**left side */}
                 <div className='sm:flex gap-8 justify-center items-center'>
                   <div className='flex flex-col gap-8'>
@@ -43,7 +43,7 @@ export default function Customerchozi() {
                 {/**right side */}
                 <div className='px-20'>
                     <div className='flex gap-2 text-5xl text-amber-400 py-3'><IoMdStar/><IoMdStar/><IoMdStar/><IoMdStarHalf/><IoMdStarHalf/></div>
-                    <h1 className='text-slate-700 font-bold md:text-4xl text-3xl'>8 Out of 10 customer<br/> loves <span className='text-slate-950 font-extrabold'>MyChoize</span></h1>
+                    <h1 className='text-slate-700 font-bold md:text-4xl sm:text-3xl text-xl'>8 Out of 10 customer<br/> loves <span className='text-slate-950 font-extrabold'>MyChoize</span></h1>
                 </div>
             </div>
        </div>
