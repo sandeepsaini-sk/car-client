@@ -23,6 +23,9 @@ export default function Cares() {
       const cars = await fetch(`${Backend}/cars`);
       const data = await cars.json();
       setcars(data.cars);
+      if(cars.ok){
+        toast.success(cars.message);
+      }
     } catch (error) {
       toast.error("cars not fetch");
     }
