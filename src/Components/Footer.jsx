@@ -40,14 +40,14 @@ export default function Footer() {
             <div className='grid grid-cols-1 lg:grid-cols-2 mt-5'>
                  
                   <div>
-                    <h1 className='text-xl font-bold text-slate-400'>Reach us</h1>
+                    <h1 className='text-xl font-semibold text-slate-400'>Reach us</h1>
                     {data2.map((item,i)=>(
                     <div key={i} className='flex items-center gap-5 mb-3'>{item.icon} 
-                    <p className='text-xl font-semibold '>{item.title}</p></div>))}
+                    <p className='text-xl'>{item.title}</p></div>))}
                   </div>
 
                   <div>
-                    <h1 className='text-xl font-bold text-slate-400'>Copyright, MyChoize 2025. All rights reserved</h1>
+                    <h1 className='text-xl font-semibold text-slate-400'>Copyright, MyChoize 2025. All rights reserved</h1>
                     <div className='flex flex-wrap gap-10 items-center mt-2'>
                     {data.map((item,i)=>(
                         <div key={i} className='flex items-center bg-white rounded-2xl px-4 py-1 gap-4'>
@@ -61,7 +61,7 @@ export default function Footer() {
                     </div>
                   </div>
             </div>
-            <h1 className='text-center mt-5 text-2xl font-semibold italic text-teal-200'>By Sandeep kumar saini</h1>
+            <h1 className='text-center mt-5 text-2xl font-serif italic text-teal-200'>By Sandeep kumar saini</h1>
         </div>
     </footer>
     </>
