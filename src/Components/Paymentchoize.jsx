@@ -28,9 +28,9 @@ export default function Paymentchoize() {
         <div className="text-3xl font-semibold text-slate-700 text-center ">
           Why ride with MyChoize?
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 w-2xl lg:container mx-auto lg:gap-3 sm:gap-4 gap-5 py-10 items-center justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 lg:container lg:mx-auto lg:gap-3 sm:gap-4 gap-6 py-10 items-center mx-5 justify-center">
           {data.map((item, i) => (
-            <div key={i} className="bg-white rounded-2xl border border-slate-300  shadow-md shadow-teal-500 translate-2 lg:p-6 p-2 lg:max-w-[400px] sm:max-w-[300px] max-w-[450px] max-h-60 overflow-hidden">
+            <div key={i} className="bg-white rounded-2xl border border-slate-300  shadow-sm shadow-teal-500 translate-2 lg:p-6 p-2  overflow-hidden hover:shadow-md">
               {item.icon}
               <h1 className="lg:text-2xl text-slate-900 font-bold ">
                 {item.title}
