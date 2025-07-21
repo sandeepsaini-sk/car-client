@@ -17,7 +17,7 @@ export default function Footer() {
     const data2=[
         {
             icon:<TfiLocationPin className='text-5xl md:text-2xl'/>,
-            title:"Sikar Road Nawalgarh cricle ke pass, JHUNJHUNU-333303 (RAJ) ,INDAI"
+            title:"Sikar Road Nawalgarh circle ke pass, JHUNJHUNU-333303 (RAJ) ,INDIA"
         },
          {
             icon:<TfiEmail className='text-2xl'/>,
@@ -30,7 +30,7 @@ export default function Footer() {
     ]
   return (
     <>
-    <div className='bg-slate-800 py-5 font-serif overflow-hidden'>
+    <footer className='bg-slate-800 py-5 font-serif overflow-hidden'>
         <div className='text-slate-300 sm:mx-20 mx-3'>
              <div className='text-center mb-10'> <Link to={"/"} className="md:text-4xl text-3xl shadow-md shadow-teal-400 hover:shadow-blue-500 px-2 md:px-3 mx-4 md:mx-0 rounded-xl ">
             C<span className="md:text-2xl text-xl">ar</span>
@@ -48,7 +48,7 @@ export default function Footer() {
 
                   <div>
                     <h1 className='text-xl font-bold text-slate-400'>Copyright, MyChoize 2025. All rights reserved</h1>
-                    <div className='flex gap-10 items-center mt-2'>
+                    <div className='flex flex-wrap gap-10 items-center mt-2'>
                     {data.map((item,i)=>(
                         <div key={i} className='flex items-center bg-white rounded-2xl px-4 py-1 gap-4'>
                             {item.icon}
@@ -63,7 +63,7 @@ export default function Footer() {
             </div>
             <h1 className='text-center mt-5 text-2xl font-semibold italic text-teal-200'>By Sandeep kumar saini</h1>
         </div>
-    </div>
+    </footer>
     </>
   )
 }
